@@ -5,9 +5,9 @@ class Solution
     static void Main(string[] args)
     {
         Console.WriteLine(IsValidAnagram("anagram", "nagaram"));  // true
-        Console.WriteLine(IsValidAnagram("rat", "cat"));          // false
-        Console.WriteLine(IsValidAnagram("rat", ""));             // false
-        Console.WriteLine(IsValidAnagram("rat", "catcat"));       // false
+        Console.WriteLine(IsValidAnagram("rat", "cat"));      // false
+        Console.WriteLine(IsValidAnagram("rat", ""));         // false
+        Console.WriteLine(IsValidAnagram("rat", "catcat"));   // false
     }
 
     private static bool IsValidAnagram(string s, string t)
@@ -18,7 +18,7 @@ class Solution
         int[] count = new int[26];
 
         foreach (char c in s)
-            count[c - 'a']++;
+            count[c -'a']++;
 
         foreach (char c in t)
             count[c - 'a']--;
